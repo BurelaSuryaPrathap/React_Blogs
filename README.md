@@ -81,54 +81,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 If you have any questions, feel free to reach out:
 
 - Email: burela@jmangroup.com
-- GitHub: [https://github.com/BurelaSuryaPrathap](https://github.com/BurelaSuryaPrathap)
-```
-   ```
+- GitHub: [https://github.com/BurelaSuryaPrathap].
 
-2. **Navigate to the project directory:**
-   ```bash
-   cd react-blogs
-   ```
 
-3. **Install the dependencies:**
-   ```bash
-   npm install
-   ```
 
-4. **Start the development server:**
-   ```bash
-   npm start
-   ```
 
-5. **Open the website in your browser:**
-   - Visit [https://react-blogs.vercel.app/](https://react-blogs.vercel.app/) to see the website running locally.
-
-## **Usage**
-
-Once you’ve successfully installed the website locally, you can:
-
-- Browse through the list of React tutorials and blog posts.
-- Read articles on various React topics, such as hooks, context API, state management, and more.
-- Participate in the discussion by commenting on articles (if the feature is enabled).
-
-## **Contributing**
-
-We welcome contributions to make this project even better! If you'd like to contribute, please follow the steps below:
-
-1. Fork this repository.
-2. Create a new branch (`git checkout -b feature-name`).
-3. Commit your changes (`git commit -m 'Add new feature'`).
-4. Push to the branch (`git push origin feature-name`).
-5. Create a pull request.
-
-## **License**
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## **Contact**
-
-If you have any questions, feel free to reach out:
-
-- Email: burela@jmangroup.com
-- GitHub: [https://github.com/BurelaSuryaPrathap](https://github.com/BurelaSuryaPrathap)
-```
