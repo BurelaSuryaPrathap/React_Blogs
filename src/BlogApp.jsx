@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes, Link, useNavigate, useParams } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 // Home Component
 const Home = () => (
   <div className="p-4 max-w-2xl mx-auto text-left">
-    <h1 className="text-white text-3xl font-bold mb-4">Welcome to the Surya's Blogging Website</h1>
+    <h1 className="text-white text-3xl font-bold mb-4">Welcome to Surya's Blogging Website</h1>
     <p className="text-lg mb-4">Share your thoughts, read amazing blogs, and connect with others.</p>
     <Link className="bg-blue-200 px-4 py-2 rounded" to="/create">Create Your First Blog</Link>
   </div>
@@ -79,9 +81,7 @@ const ViewBlog = ({ blogs, incrementViews, likeBlog }) => {
     if (blog) {
       incrementViews(blog.id); // Increment views when page is loaded
     }
-  }, []);
-
-
+  }, [blog, incrementViews]);
 
   if (!blog) return <div>Blog not found</div>;
 
@@ -168,12 +168,28 @@ const BlogApp = () => {
     setTitle("");
     setImage("");
     setContent("");
+
+    toast.success('Blog added successfully!', {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+    });
   };
 
   const deleteBlog = (id) => {
     const updatedBlogs = blogs.filter((blog) => blog.id !== id);
     setBlogs(updatedBlogs);
     saveToLocalStorage(updatedBlogs);
+
+    toast.error('Blog deleted successfully!', {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+    });
   };
 
   const updateBlog = (updatedBlog) => {
@@ -225,6 +241,8 @@ const BlogApp = () => {
       {isOverlayOpen && currentBlog && (
         <BlogOverlay blog={currentBlog} onClose={closeOverlay} likeBlog={likeBlog} incrementViews={incrementViews} />
       )}
+
+      <ToastContainer />
     </Router>
   );
 };
