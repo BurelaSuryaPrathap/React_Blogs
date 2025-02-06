@@ -81,7 +81,7 @@ const ViewBlog = ({ blogs, incrementViews, likeBlog }) => {
     if (blog) {
       incrementViews(blog.id); // Increment views when page is loaded
     }
-  }, [blog, incrementViews]);
+  }, []);
 
   if (!blog) return <div>Blog not found</div>;
 
